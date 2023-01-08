@@ -2,9 +2,10 @@
     <form action="">
         <img src="https://logosandtypes.com/wp-content/uploads/2020/06/bank-of-baroda.png" alt="Logo" width="80px">
         <h3>REGISTER</h3>
-        <input type="text" placeholder="User name">
-        <input type="text" placeholder="Account number">
-        <input type="password" placeholder="Password">
-        <button>Register</button>
+        <input [(ngModel)]="uname" type="text" name="userName" placeholder="User name">
+        <input [(ngModel)]="acno" type="text" name="Account number" placeholder="Account number">
+        <input [(ngModel)]="pswd" type="password" name="password" placeholder="Password">
+        <button type="button" (click)="register()">Register</button>
+        <a routerLink="/">Login</a>
     </form>
 </div>

@@ -20,12 +20,12 @@
 3.Run - ng serve --open
 
 ---------------------------------------------------------------------
-        1.Data Binding
+        Data Binding
 -To share data inside the component
 
 ts - Component & html - View
 
-    1.1)One way data binding - (ts to html or html to ts)
+    1)One way data binding - (ts to html or html to ts)
 
         (a)Component to view ->
             (a.1)String interpolation - {{}}
@@ -33,5 +33,20 @@ ts - Component & html - View
 
         (b)View to component ->
             (b.1)Event binding - (event_name)="function_name"
-            (b.1)Event binding using $event - (event_name)="function_name($event)"
+            (b.2)Event binding using $event - (event_name)="function_name($event)"
+            (b.3)Event binding using template referencing variable - #variable_name
 
+    1.2)Two way data binding - (data share in both directions-ts to html & html to ts)
+            ngModel - (library)-import from FormsModule
+
+
+2)Angular routing
+    -To set path for a component
+
+3)Dependency injection
+    -To share data between two components
+    eg:login to home page
+
+4)Angular services
+    -To hold redundent data 
+    -to create a service in angular (ng g s service_name)

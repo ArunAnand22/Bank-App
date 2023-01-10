@@ -42,11 +42,36 @@ ts - Component & html - View
 
 2)Angular routing
     -To set path for a component
+    Use <router-outlet></router-outlet>
 
 3)Dependency injection
-    -To share data between two components
+    -To share data between two components(we use constructor(){})
     eg:login to home page
 
 4)Angular services
     -To hold redundent data 
     -to create a service in angular (ng g s service_name)
+
+5)Angular Directives
+
+    -to manipulate DOM
+    
+    (5.1)Component Directives
+    (5.2)Structural Directives
+        eg: table structure
+        
+        (a)*ngFor
+
+6)Angular Forms
+
+    (6.1)Template driven Forms (designing of html page)
+    (6.2)Model driven Forms (ts file model , design ->html page)
+        -for advanced validation
+        (a)Reactive form Module
+            -group,array,controller
+            -Import Reactive forms Module
+
+7)Local Storage
+
+    
+

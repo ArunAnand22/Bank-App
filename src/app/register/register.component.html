@@ -1,10 +1,13 @@
 <div class="main">
-    <form action="">
+    <form [formGroup]="registerForm" action="">
         <img src="https://logosandtypes.com/wp-content/uploads/2020/06/bank-of-baroda.png" alt="Logo" width="80px">
         <h3>REGISTER</h3>
-        <input [(ngModel)]="uname" type="text" name="userName" placeholder="User name">
-        <input [(ngModel)]="acno" type="text" name="Account number" placeholder="Account number">
-        <input [(ngModel)]="pswd" type="password" name="password" placeholder="Password">
+        <input  type="text" formControlName="uname" name="userName" placeholder="User name">
+        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" style="color: red;">*Invalid Username</div>
+        <input formControlName="acno" type="text" name="Account number" placeholder="Account number">
+        <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" style="color: red;">*Invalid Account number</div>
+        <input formControlName="pswd" type="password" name="password" placeholder="Password">
+        <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" style="color: red;">*Invalid Passowrd</div>
         <button type="button" (click)="register()">Register</button>
         <a routerLink="/">Login</a>
     </form>

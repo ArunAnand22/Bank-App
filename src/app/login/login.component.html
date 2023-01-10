@@ -1,9 +1,11 @@
 <div class="main">
-    <form action="">
+    <form [formGroup]="loginForm" action="">
         <img src="https://logosandtypes.com/wp-content/uploads/2020/06/bank-of-baroda.png" alt="Logo" width="80px">
         <h3>LOGIN</h3>
-        <input type="text" name="acno" id="login_acno" [(ngModel)]="acno" placeholder="Account number">
-        <input type="password" name="password" id="login_pswd" [(ngModel)]="pswd" placeholder="Password">
+        <input type="text" name="acno" id="login_acno" formControlName="acno" placeholder="Account number">
+        <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" style="color: red;">*Invalid Account number</div>
+        <input type="password" name="password" id="login_pswd" formControlName="pswd" placeholder="Password">
+        <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: red;">*Invalid Password</div>
         <button (click)="login()" type="button">Login</button>
         <a routerLink="/register">Create new account?</a>
     </form>
